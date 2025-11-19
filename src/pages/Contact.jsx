@@ -184,10 +184,10 @@ const Contact = () => {
     {
       Icon: Mail,
       title: "Email Us",
-      content: "bookings@skylogisticshub.com",
+      content: "bookings@skyrydr.com",
       description: "Quick response guaranteed",
       color: "from-purple-500 to-indigo-500",
-      link: "mailto:bookings@skylogisticshub.com"
+      link: "mailto:bookings@skyrydr.com"
     },
     {
       Icon: Clock,

@@ -216,7 +216,7 @@ const LegalCompliance = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border border-white/30 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-300"
-                  onClick={() => window.location.href = 'mailto:bookings@skylogisticshub.com'}
+                  onClick={() => window.location.href = 'mailto:bookings@skyrydr.com'}
                 >
                   Email Documentation
                 </motion.button>

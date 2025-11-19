@@ -154,10 +154,10 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5 flex-shrink-0 text-cyan-400 group-hover:scale-110 transition-transform" />
                 <a
-                  href="mailto:bookings@skylogisticshub.com"
+                  href="mailto:bookings@skyrydr.com"
                   className="text-white/70 group-hover:text-white transition-colors hover:underline"
                 >
-                  bookings@skylogisticshub.com
+                  bookings@skyrydr.com
                 </a>
               </motion.li>
             </ul>

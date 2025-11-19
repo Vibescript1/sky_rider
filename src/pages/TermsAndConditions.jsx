@@ -11,7 +11,7 @@ const TermsAndConditions = () => {
       content: [
         "The customer shall pay the car rental fare as per the applicable rates and payment schedules mentioned on the website of skyrydr at the time of booking. The customer shall also pay parking charges, toll-charges, service tax, state tax and any other fee or levy presently payable or imposed hereinafter under applicable law/s for availing the car rental services.",
         "The payment has to be transferred to the skyrydr account for the transaction to be completed. The client will have the responsibility to confirm the transaction with skyrydr and send all relevant details and proof to confirm the same.",
-        "The billing shall be done after the completion of the transaction and the bill shall be sent through email. The client shall pay the amount communicated on email through the payment gateway and shall send us the confirmation of the transaction separately through email to info@skylogistic.com.",
+        "The billing shall be done after the completion of the transaction and the bill shall be sent through email. The client shall pay the amount communicated on email through the payment gateway and shall send us the confirmation of the transaction separately through email to info@skyrydr.com.",
         "In case of a payment made before the commencement of a booking, the amount shall be treated as advance / part payment and the final amount nett of the advance paid shall be cleared by the client as per the amount intimated to the client on email.",
         "The transaction / payment has to be made within the office hours of 0930 to 1900 hrs on a monday to saturday basis excluding public holidays for the vehicle to be dispatched. alternatively, for other hours / days, the client has the option to come to our 24×7 operations office and complete the physical swiping of the credit card and make the payment and confirm the booking."
       ]
@@ -45,7 +45,7 @@ const TermsAndConditions = () => {
       icon: FileText,
       content: [
         "In case of any dispute arising between the Customer and skyrydr, the dispute shall be referred to an Arbitrator, appointed by skyrydr in its sole discretion. The Arbitrator so appointed by skyrydr shall act in conformity with the Arbitration and Conciliation Act, 1996. The award so passed by the Arbitrator shall be binding upon the Customer as well as skyrydr. The courts of Hyderabad, India shall have the sole and exclusive jurisdiction in respect of any matters which may be instituted before any court of law, arising from the use of the services offered by skyrydr.",
-        "skyrydr shall be entitled to add, vary or amend any or all of these terms and conditions at any time at its sole discretion and the Customer shall be bound by such addition, variation or amendment incorporated/made in these terms and conditions with effect from the date set forth by skyrydr. The terms and conditions shall be available on skyrydr website www.skylogistic.com",
+        "skyrydr shall be entitled to add, vary or amend any or all of these terms and conditions at any time at its sole discretion and the Customer shall be bound by such addition, variation or amendment incorporated/made in these terms and conditions with effect from the date set forth by skyrydr. The terms and conditions shall be available on skyrydr website www.skyrydr.com",
         "skyrydr shall be entitled to record all the calls made to the call centre/s of skyrydr for quality and training purposes.",
         "Vehicles registered with skyrydr may be continuously tracked by skyrydr using GPS for security reasons or for reasons deemed fit and proper by skyrydr."
       ]
@@ -224,12 +224,12 @@ const TermsAndConditions = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                 <div>
                   <h3 className="font-semibold text-white mb-2">Legal Inquiries</h3>
-                  <p className="text-indigo-100 mb-1">bookings@skylogisticshub.com</p>
+                  <p className="text-indigo-100 mb-1">bookings@skyrydr.com</p>
                   <p className="text-indigo-100">Phone: +91 9121261234</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-white mb-2">General Support</h3>
-                  <p className="text-indigo-100 mb-1">bookings@skylogisticshub.com</p>
+                  <p className="text-indigo-100 mb-1">bookings@skyrydr.com</p>
                   <p className="text-indigo-100">Phone: +91 9121261234X</p>
                 </div>
               </div>
