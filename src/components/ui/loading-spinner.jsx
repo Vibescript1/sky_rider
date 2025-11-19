@@ -54,23 +54,34 @@ const LoadingSpinner = ({
   if (variant === "car") {
     return (
       <div className={cn("relative", sizeClasses[size], className)} {...props}>
+        {/* Car body */}
         <motion.div
-          className="absolute inset-0 border-4 border-accent/20 rounded-full"
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          <div className="w-8 h-4 bg-accent rounded-sm"></div>
+        </motion.div>
+        
+        {/* Car wheels */}
+        <motion.div 
+          className="absolute bottom-0 left-1 w-2 h-2 bg-gray-800 rounded-full"
           animate={{ rotate: 360 }}
-          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
         />
+        <motion.div 
+          className="absolute bottom-0 right-1 w-2 h-2 bg-gray-800 rounded-full"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Motion effect */}
         <motion.div
-          className="absolute inset-2 border-4 border-accent border-t-transparent rounded-full"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0 border-2 border-accent/30 rounded-full"
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.7, 1, 0.7]
+          }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.div
-            className="w-2 h-2 bg-accent rounded-full"
-            animate={{ scale: [1, 1.5, 1] }}
-            transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div>
       </div>
     );
   }

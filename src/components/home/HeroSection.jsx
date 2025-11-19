@@ -83,8 +83,7 @@ const HeroSection = () => {
   return (
     <>
       <PageLoader 
-        isLoading={isLoading} 
-        message="Welcome to Trident Logistics"
+        isLoading={isLoading}
       />
       
       <motion.section 
@@ -226,23 +225,13 @@ const HeroSection = () => {
                 ))}
               </motion.div>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons - Call Now button removed */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.9 }}
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8"
               >
-                <a href="tel:+919121261234">
-                  <Button
-                    size="sm"
-                    className="bg-accent hover:bg-accent/90 text-white px-4 py-2 text-sm font-semibold shadow-xl shadow-accent/50 group"
-                  >
-                    <Phone className="mr-1 w-3 h-3 group-hover:scale-110 transition-transform" />
-                    Call Now
-                    <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </a>
               </motion.div>
             </motion.div>
 

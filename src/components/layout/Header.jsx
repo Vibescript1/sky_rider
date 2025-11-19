@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, User, Linkedin, Instagram, Star, Shield } from "lucide-react";
+import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -44,7 +44,7 @@ const Header = () => {
             >
               <img
                 src="/skyrydr logo png.png" 
-                alt="Sky Logistic Logo"
+                alt="skyrydr Logo"
                 className="h-10 sm:h-12 md:h-14 w-auto object-contain"
               />
             </motion.div>
@@ -59,8 +59,8 @@ const Header = () => {
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 ml-6">
+          {/* Desktop Navigation - Right aligned */}
+          <nav className="hidden lg:flex items-center gap-1 ml-auto">
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} className="relative group">
                 <div
@@ -88,41 +88,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Removed phone and social media */}
           <div className="hidden md:flex items-center gap-4">
-            {/* Social Media Icons */}
-            <div className="flex items-center gap-2 mr-1">
-              {[
-                { icon: Linkedin, href: "https://www.linkedin.com/company/sky-logistics-hub" },
-                { icon: Instagram, href: "https://www.instagram.com/sky_logisticshub/" },
-              ].map(({ icon: Icon, href }, index) => (
-                <a
-                  key={index}
-                  href={href}
-                  className="p-2 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 hover:bg-blue-500/20 hover:scale-105 transition-all duration-200 group"
-                >
-                  <Icon className="w-4 h-4 text-white/70 group-hover:text-white" />
-                </a>
-              ))}
-            </div>
-            
-            {/* Phone Number */}
-            <a href="tel:+919121261234">
-              <motion.div
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.99 }}
-                transition={{ type: "spring", stiffness: 300, damping: 15 }}
-              >
-                <div className="relative overflow-hidden group border border-white/20 hover:border-blue-400/50 transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] font-semibold px-3 py-2 rounded-xl h-10 flex items-center backdrop-blur-sm bg-white/5 hover:bg-blue-500/20">
-                  <Phone className="w-4 h-4 mr-1.5 text-blue-400 group-hover:text-white transition-all duration-500 ease-in-out z-10" />
-                  <span className="relative z-10 text-sm text-white/90 group-hover:text-white transition-all duration-500 ease-in-out font-medium">
-                    +91 91212 61234
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] origin-left" />
-                </div>
-              </motion.div>
-            </a>
-
             {/* Dashboard Button */}
             {/* <Link to="/dashboard">
               <motion.div
@@ -182,37 +149,8 @@ const Header = () => {
                 </Link>
               ))}
               
-              {/* Mobile CTA Section */}
+              {/* Mobile CTA Section - Removed phone and social media */}
               <div className="flex flex-col gap-4 pt-6 mt-6 border-t border-white/10">
-                {/* Social Media */}
-                <div className="flex justify-center gap-4">
-                  {[
-                    { icon: Linkedin, href: "https://www.linkedin.com/company/sky-logistics-hub" },
-                    { icon: Instagram, href: "https://www.instagram.com/sky_logisticshub/" },
-                  ].map(({ icon: Icon, href }, index) => (
-                    <a
-                      key={index}
-                      href={href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 hover:bg-blue-500/20 transition-all duration-200"
-                    >
-                      <Icon className="w-5 h-5 text-white/70" />
-                    </a>
-                  ))}
-                </div>
-
-                {/* Phone Number */}
-                <a href="tel:+919121261234" onClick={() => setIsMobileMenuOpen(false)}>
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 hover:bg-blue-500/20 rounded-xl p-4 flex items-center justify-center gap-3 transition-all duration-300"
-                  >
-                    <Phone className="w-5 h-5 text-blue-400" />
-                    <span className="text-white font-medium">+91 91212 61234</span>
-                  </motion.div>
-                </a>
-
                 {/* Dashboard Button */}
                 {/* <Link to="/dashboard" onClick={() => setIsMobileMenuOpen(false)}>
                   <motion.div

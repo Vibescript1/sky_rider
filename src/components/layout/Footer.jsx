@@ -34,7 +34,7 @@ const Footer = () => {
                 >
                   <img
                     src="/skyrydr logo png.png"
-                    alt="Sky Logistic Logo"
+                    alt="skyrydr Logo"
                     className="h-16 sm:h-20 md:h-24 w-auto object-contain"
                   />
                 </motion.div>

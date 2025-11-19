@@ -9,8 +9,8 @@ const PrivacyPolicy = () => {
       title: "Introduction",
       icon: Shield,
       content: [
-        "Sky Logistic is committed to protecting the privacy and security of your personal information. This privacy statement describes how we collect and use your personal information and data, in accordance with the EU General Data Protection Regulation (GDPR). It applies to all guests and visitors, known through this document as 'data subjects'.",
-        "Sky Logistic is a 'data controller'. This means that we are responsible for deciding how we hold and use personal information about you. We are required under data protection legislation to notify you of the information contained in this privacy statement.",
+        "skyrydr is committed to protecting the privacy and security of your personal information. This privacy statement describes how we collect and use your personal information and data, in accordance with the EU General Data Protection Regulation (GDPR). It applies to all guests and visitors, known through this document as 'data subjects'.",
+        "skyrydr is a 'data controller'. This means that we are responsible for deciding how we hold and use personal information about you. We are required under data protection legislation to notify you of the information contained in this privacy statement.",
         "This statement applies to data subjects. This statement does not form part of any contract to provide services. We may update this statement at any time. It is important that you read this statement, together with any other privacy statement we may provide on specific occasions when we are collecting or processing personal information about you, so that you are aware of how and why we are using such information."
       ]
     },
@@ -80,14 +80,14 @@ const PrivacyPolicy = () => {
       title: "Data Sharing and Third Parties",
       icon: Users,
       content: [
-        "We may have to share your data with third parties, including third-party service providers and other entities in Sky Logistic. We require appointed third parties to respect the security of your data and to treat it in accordance with the law.",
+        "We may have to share your data with third parties, including third-party service providers and other entities in skyrydr. We require appointed third parties to respect the security of your data and to treat it in accordance with the law.",
         "We will share your personal information with third parties where required by law, or where we have another legitimate interest in doing so, or when we have your explicit consent.",
         "\nWhich third-party service providers process my personal information?",
         "'Third parties' includes third-party service providers (including contractors and designated agents) and other entities within our group.",
         "\nHow secure is my information with third-party service providers and other entities in our group?",
         "All our third-party service providers and other entities in the group are required to take appropriate security measures to protect your personal information in line with our policies. We do not allow our third-party service providers to use your personal data for their own purposes. We only permit them to process your personal data for specified purposes and in accordance with our instructions.",
         "\nWhen might you share my personal information with other entities in the group?",
-        "We may share your personal information with other entities in Sky Logistic as part of our regular reporting activities on company performance, in the context of system maintenance, support and hosting of data.",
+        "We may share your personal information with other entities in skyrydr as part of our regular reporting activities on company performance, in the context of system maintenance, support and hosting of data.",
         "\nWhat about other third parties?",
         "We may share your personal information with other third parties, for example in the context of the possible sale or restructuring of the business. We may also need to share your personal information with a regulator or to otherwise comply with the law."
       ]
@@ -152,7 +152,7 @@ const PrivacyPolicy = () => {
       title: "Contact Us",
       icon: Users,
       content: [
-        "In case of any questions or suggestions regarding the Policy, please contact Sky Logistic at:",
+        "In case of any questions or suggestions regarding the Policy, please contact skyrydr at:",
         "Email: info@skylogistic.com"
       ]
     }
@@ -206,7 +206,7 @@ const PrivacyPolicy = () => {
               Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-400">Policy</span>
             </h1>
             <p className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto mb-8">
-              Sky Logistic is committed to protecting your privacy and ensuring the security of your personal information in accordance with GDPR and applicable data protection laws. This policy explains how we collect, use, and protect your personal data.
+              skyrydr is committed to protecting your privacy and ensuring the security of your personal information in accordance with GDPR and applicable data protection laws. This policy explains how we collect, use, and protect your personal data.
             </p>
             <div className="text-blue-100 text-sm">
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -225,7 +225,7 @@ const PrivacyPolicy = () => {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-12">
               <h2 className="font-bold text-2xl text-gray-900 mb-4">Our Commitment to Data Protection</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                At Sky Logistic, we understand that your privacy is paramount. This Privacy Policy explains how we collect,
+                At skyrydr, we understand that your privacy is paramount. This Privacy Policy explains how we collect,
                 use, disclose, and safeguard your information when you use our transportation services. We are committed to
                 protecting your personal information and being transparent about our data practices in compliance with GDPR principles.
               </p>

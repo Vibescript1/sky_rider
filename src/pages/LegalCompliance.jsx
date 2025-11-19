@@ -9,9 +9,9 @@ const LegalCompliance = () => {
       title: "Company Overview",
       icon: Building2,
       content: [
-        "Sky Logistics Hub Private Limited is a compliant corporate transportation service provider based in India.",
+        "skyrydr Hub Private Limited is a compliant corporate transportation service provider based in India.",
         "While our management team brings over two decades of rich experience in the mobility and logistics industry, this company was operational from 2018.",
-        "Company Name: Sky Logistics Hub Private Limited",
+        "Company Name: skyrydr Hub Private Limited",
         "CIN: U63031TG2019PTC131839",
         "GSTIN: 36ABBCS8643L1ZU"
       ],
@@ -33,7 +33,7 @@ const LegalCompliance = () => {
       content: [
         "All content on this website is for general informational purposes only.",
         "Vehicle images and visuals displayed are for illustration and representational purposes and may not always depict the exact models or configurations used in service.",
-        "Sky Logistics respects your privacy. Any information voluntarily shared with us through calls, emails, or contact forms is used solely for communication and service-related purposes.",
+        "skyrydr respects your privacy. Any information voluntarily shared with us through calls, emails, or contact forms is used solely for communication and service-related purposes.",
         "We do not sell, trade, or disclose personal information to any unauthorized third parties."
       ],
       color: "from-purple-500 to-indigo-500"

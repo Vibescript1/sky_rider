@@ -1,6 +1,6 @@
 # Loading Animations System
 
-This document describes the comprehensive loading animation system implemented in the Sky Logistics application.
+This document describes the comprehensive loading animation system implemented in the skyrydr application.
 
 ## 🎯 Overview
 
@@ -260,4 +260,4 @@ A comprehensive demo is available at `/src/components/demo/LoadingDemo.jsx` show
 
 ---
 
-This loading animation system provides a professional, consistent, and engaging user experience throughout the Sky Logistics application.
+This loading animation system provides a professional, consistent, and engaging user experience throughout the skyrydr application.

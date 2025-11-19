@@ -111,7 +111,7 @@ const About = () => {
               <div className="space-y-6 text-white/70 text-lg leading-relaxed">
                 <p>
                   Founded in 2018 with a vision to revolutionize corporate transportation, 
-                  <span className="text-white font-semibold"> Sky Logistic</span> has emerged as 
+                  <span className="text-white font-semibold"> skyrydr</span> has emerged as 
                   India's most trusted partner for premium business travel solutions.
                 </p>
                 <p>
@@ -320,7 +320,7 @@ const About = () => {
                 Ready to Transform Your Corporate Travel?
               </h2>
               <p className="text-white/70 text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
-                Join 500+ leading companies that trust Sky Logistic for their premium transportation needs.
+                Join 500+ leading companies that trust skyrydr for their premium transportation needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+919121261234">

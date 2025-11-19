@@ -62,7 +62,7 @@ const Contact = () => {
           .addTo(mapInstanceRef.current)
           .bindPopup(`
             <div style="text-align: center; padding: 8px;">
-              <strong style="color: #2563eb;">Sky Logistic HQ</strong><br/>
+              <strong style="color: #2563eb;">skyrydr HQ</strong><br/>
               <span style="color: #6b7280; font-size: 12px;">Gachibowli, Hyderabad, India</span>
             </div>
           `)
@@ -445,7 +445,7 @@ const Contact = () => {
                 />
                 <div className="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10">
                   <p className="text-white/80 text-sm leading-relaxed">
-                    <strong className="text-white">Sky Logistic HQ</strong><br/>
+                    <strong className="text-white">skyrydr HQ</strong><br/>
                     Plot No. 41-48, Flat No.502, Telecom Nagar, Gachibowli, Hyderabad, Telangana – 500032
                   </p>
                 </div>
@@ -466,7 +466,7 @@ const Contact = () => {
               className="text-center mb-16"
             >
               <h2 className="font-bold text-4xl md:text-5xl text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Sky Logistics</span>
+                Why Choose <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">skyrydr</span>
               </h2>
             </motion.div>
 
