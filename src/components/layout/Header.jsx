@@ -23,6 +23,7 @@ const Header = () => {
     { name: "Our Fleet", path: "/fleet" },
     { name: "Contact Us", path: "/contact" },
     { name: "Legal & Compliance", path: "/legal-compliance" },
+    { name: "Call Now", path: "tel:+919121261234", highlight: true },
   ];
 
   return (
@@ -71,7 +72,15 @@ const Header = () => {
                   }`}
                 >
                   {link.name}
-                  {location.pathname === link.path && (
+                  {link.highlight && (
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl -z-10"
+                      initial={{ opacity: 0.7 }}
+                      animate={{ opacity: [0.7, 1, 0.7] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                  )}
+                  {location.pathname === link.path && !link.highlight && (
                     <motion.div
                       layoutId="activeNav"
                       className="absolute inset-0 bg-white/10 rounded-xl -z-10"
@@ -140,9 +149,11 @@ const Header = () => {
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`py-3 px-4 rounded-xl font-medium transition-all duration-300 ${
-                    location.pathname === link.path
-                      ? "text-blue-400 bg-white/10 border-l-4 border-blue-400"
-                      : "text-white/80 hover:text-white hover:bg-white/5"
+                    link.highlight 
+                      ? "text-white bg-gradient-to-r from-blue-500 to-cyan-500"
+                      : location.pathname === link.path
+                        ? "text-blue-400 bg-white/10 border-l-4 border-blue-400"
+                        : "text-white/80 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {link.name}

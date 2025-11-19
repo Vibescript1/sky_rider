@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WhatsAppButton from "./components/WhatsAppButton";
-import CallButton from "./components/CallButton";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Index from "./pages/Index";
 import Fleet from "./pages/Fleet";
@@ -41,10 +40,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <>
-                <WhatsAppButton />
-                <CallButton />
-              </>
+        <WhatsAppButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
