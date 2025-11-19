@@ -65,7 +65,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} className="relative group">
                 <div
-                  className={`px-5 py-3 rounded-xl transition-all duration-300 font-medium ${
+                  className={`px-5 py-3 rounded-xl transition-all duration-300 font-medium text-sm ${
                     location.pathname === link.path
                       ? "text-blue-400 font-semibold"
                       : "text-white/80 hover:text-white"
