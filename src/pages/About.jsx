@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Shield,Phone, Award, Users, Clock, MapPin, Star, TrendingUp, Heart, ArrowRight, Target, Zap } from "lucide-react";
+import { Shield, Phone, Award, Users, Clock, MapPin, Star, TrendingUp, Heart, ArrowRight, Target, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -46,6 +46,27 @@ const About = () => {
     { year: "2020", event: "National Expansion", achievement: "Expanded to 10+ cities" },
     { year: "2022", event: "Tech Revolution", achievement: "Launched digital platform" },
     { year: "2024", event: "Market Leadership", achievement: "500+ corporate clients" }
+  ];
+
+  const teamMembers = [
+    {
+      name: "Alex Morgan",
+      role: "Founder & CEO",
+      bio: "15+ years in transportation & logistics with a passion for innovation",
+      image: "/placeholder-team-1.jpg"
+    },
+    {
+      name: "Sam Rivera",
+      role: "Chief Operations Officer",
+      bio: "Operations expert focused on efficiency and customer satisfaction",
+      image: "/placeholder-team-2.jpg"
+    },
+    {
+      name: "Taylor Kim",
+      role: "Head of Technology",
+      bio: "Building scalable platforms for seamless transportation experiences",
+      image: "/placeholder-team-3.jpg"
+    }
   ];
 
   return (
@@ -302,6 +323,56 @@ const About = () => {
                 </div>
                 <h3 className="font-bold text-xl text-white mb-4">{feature.title}</h3>
                 <p className="text-white/70 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="py-20 relative bg-gradient-to-b from-slate-800/50 to-slate-900/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <motion.div
+              initial={{ opacity: 1 }}
+              className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10 mb-6"
+            >
+              <Users className="w-4 h-4 text-blue-400" />
+              <span className="text-white/80 text-sm font-medium">Leadership Team</span>
+            </motion.div>
+
+            <h2 className="font-bold text-4xl md:text-6xl text-white mb-8 leading-tight">
+              Meet Our <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Leadership</span>
+            </h2>
+            <p className="text-white/70 text-xl max-w-2xl mx-auto">
+              The visionary minds driving innovation and excellence at skyrydr
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300 group text-center"
+              >
+                <div className="mx-auto mb-6 relative">
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1 mx-auto">
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+                <h3 className="font-bold text-xl text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 font-medium mb-4">{member.role}</p>
+                <p className="text-white/70 leading-relaxed">{member.bio}</p>
               </motion.div>
             ))}
           </div>
