@@ -70,7 +70,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style={{ scrollbarWidth: 'thin' }}>
       <Header />
       
       {/* Hero Section */}
@@ -279,37 +279,36 @@ const About = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                icon: Shield,
-                title: "POSH Certified",
-                description: "Fully compliant with POSH regulations ensuring safe and respectful transportation"
-              },
-              {
-                icon: MapPin,
-                title: "GPS Monitoring",
-                description: "Real-time fleet tracking for safety, optimization, and peace of mind"
-              },
-              {
-                icon: Users,
-                title: "Expert Chauffeurs",
-                description: "Professional, trained drivers with extensive experience and background checks"
-              },
-              {
-                icon: Award,
-                title: "Premium Fleet",
-                description: "Luxury vehicles maintained to the highest standards for executive comfort"
-              },
-              {
-                icon: Clock,
-                title: "24/7 Support",
-                description: "Round-the-clock dedicated account management and customer support"
-              },
-              {
-                icon: Heart,
-                title: "Client Focused",
-                description: "Personalized services tailored to your specific corporate requirements"
-              }
+            {[{
+              icon: Shield,
+              title: "POSH Certified",
+              description: "Fully compliant with POSH regulations ensuring safe and respectful transportation"
+            },
+            {
+              icon: MapPin,
+              title: "GPS Monitoring",
+              description: "Real-time fleet tracking for safety, optimization, and peace of mind"
+            },
+            {
+              icon: Users,
+              title: "Expert Chauffeurs",
+              description: "Professional, trained drivers with extensive experience and background checks"
+            },
+            {
+              icon: Award,
+              title: "Premium Fleet",
+              description: "Luxury vehicles maintained to the highest standards for executive comfort"
+            },
+            {
+              icon: Clock,
+              title: "24/7 Support",
+              description: "Round-the-clock dedicated account management and customer support"
+            },
+            {
+              icon: Heart,
+              title: "Client Focused",
+              description: "Personalized services tailored to your specific corporate requirements"
+            }
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}

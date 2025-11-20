@@ -2,12 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Only hide horizontal scrollbar, allow vertical scrolling */
-*::-webkit-scrollbar{
-  display: none;
+/* Custom scrollbar styling - only show main page scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
 }
-*{
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4F46E5 0%, #6366F1 50%, #4F46E5 100%);
+  border-radius: 12px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  min-height: 50px;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6366F1 0%, #4F46E5 50%, #6366F1 100%);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.6);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #3a34b0 0%, #4F46E5 50%, #3a34b0 100%);
+  box-shadow: 0 2px 4px rgba(58, 52, 176, 0.8);
+}
+
+/* Hide scrollbars on all elements except the main page scrollbar */
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+/* Only show scrollbar on the main page */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4F46E5 0%, #6366F1 50%, #4F46E5 100%);
+  border-radius: 12px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  min-height: 50px;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
+  transition: all 0.3s ease;
+}
+
+html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6366F1 0%, #4F46E5 50%, #6366F1 100%);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.6);
+}
+
+html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #3a34b0 0%, #4F46E5 50%, #3a34b0 100%);
+  box-shadow: 0 2px 4px rgba(58, 52, 176, 0.8);
+}
+
+* {
   overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html, body {
+  scrollbar-width: thin; /* Firefox */
+  -ms-overflow-style: auto; /* IE and Edge */
+  scrollbar-color: #6366F1 rgba(255, 255, 255, 0.08); /* Firefox scrollbar colors */
 }
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here.

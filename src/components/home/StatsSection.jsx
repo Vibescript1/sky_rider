@@ -125,7 +125,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden" style={{ touchAction: 'auto' }}>
+    <section className="py-20 relative overflow-hidden">
       {/* Background Elements - Consistent with other sections */}
       <div className="absolute inset-0">
         {/* Floating Orbs */}

@@ -12,7 +12,7 @@ import SmoothScroll from "@/components/home/SmoothScroll";
 
 const Home = () => {
   return (
-    <div className="min-h-screen overflow-y-auto" style={{ touchAction: 'auto' }}>
+    <div className="min-h-screen" style={{ touchAction: 'auto' }}>
       <Header />
       <main>
         <HeroSection />
