@@ -15,7 +15,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#00030f] via-[#000a20] to-[#00030f] relative overflow-hidden">
+    <footer className="bg-[#1a1a1a] relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
@@ -26,16 +26,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex justify-start gap-2 mb-6 items-center">
+            <div className="flex justify-start gap-2 mb-1 items-center">
               <Link to="/" className="flex items-center gap-3 group relative">
                 <motion.div 
                   whileHover={{ scale: 1.05 }} 
                   className="relative"
                 >
                   <img
-                    src="/skyrydr logo png.png"
+                    src="/logo.png"
                     alt="skyrydr Logo"
-                    className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+                    className="h-24 sm:h-28 md:h-32 w-auto object-contain filter invert"
                   />
                 </motion.div>
               </Link>
@@ -84,9 +84,9 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.to}
-                    className="text-white/70 hover:text-blue-400 hover:translate-x-2 transition-all duration-300 flex items-center gap-2 group"
+                    className="text-white/70 hover:text-[#295DFF] hover:translate-x-2 transition-all duration-300 flex items-center gap-2 group"
                   >
-                    <div className="w-1.5 h-1.5 bg-white/30 rounded-full group-hover:bg-blue-400 transition-colors" />
+                    <div className="w-1.5 h-1.5 bg-white/30 rounded-full group-hover:bg-[#295DFF] transition-colors" />
                     {link.name}
                   </Link>
                 </li>
@@ -110,8 +110,8 @@ const Footer = () => {
                 "VIP Transportation"
               ].map((service) => (
                 <li key={service}>
-                  <div className="text-white/70 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group">
-                    <div className="w-1.5 h-1.5 bg-white/30 rounded-full group-hover:bg-cyan-400 transition-colors" />
+                  <div className="text-white/70 hover:text-[#295DFF] transition-colors duration-300 flex items-center gap-2 group">
+                    <div className="w-1.5 h-1.5 bg-white/30 rounded-full group-hover:bg-[#295DFF] transition-colors" />
                     {service}
                   </div>
                 </li>
@@ -175,7 +175,7 @@ const Footer = () => {
               <Link
                 key={link.name}
                 to={link.to}
-                className="text-white/60 hover:text-blue-400 hover:underline transition-colors duration-300"
+                className="text-white/60 hover:text-[#295DFF] hover:underline transition-colors duration-300"
               >
                 {link.name}
               </Link>

@@ -14,25 +14,25 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00030f 0%, #000a20 50%, #00030f 100%);
+  background: linear-gradient(180deg, #295DFF 0%, #1a4ce0 50%, #295DFF 100%);
   border-radius: 14px;
   border: 3px solid transparent;
   background-clip: padding-box;
   min-height: 60px;
-  box-shadow: 0 4px 12px rgba(0, 3, 15, 0.6);
+  box-shadow: 0 4px 12px rgba(41, 93, 255, 0.6);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #000a20 0%, #00030f 50%, #000a20 100%);
-  box-shadow: 0 6px 16px rgba(0, 3, 15, 0.8);
+  background: linear-gradient(180deg, #1a4ce0 0%, #295DFF 50%, #1a4ce0 100%);
+  box-shadow: 0 6px 16px rgba(41, 93, 255, 0.8);
   border-radius: 14px;
   transform: scale(1.05);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(180deg, #000108 0%, #00030f 50%, #000108 100%);
-  box-shadow: 0 2px 6px rgba(0, 1, 8, 0.9);
+  background: linear-gradient(180deg, #123bc0 0%, #295DFF 50%, #123bc0 100%);
+  box-shadow: 0 2px 6px rgba(18, 59, 192, 0.9);
 }
 
 /* Hide scrollbars on all elements except the main page scrollbar */
@@ -55,24 +55,24 @@ html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00030f 0%, #000a20 50%, #00030f 100%);
+  background: linear-gradient(180deg, #295DFF 0%, #1a4ce0 50%, #295DFF 100%);
   border-radius: 14px;
   border: 3px solid transparent;
   background-clip: padding-box;
   min-height: 60px;
-  box-shadow: 0 4px 12px rgba(0, 3, 15, 0.6);
+  box-shadow: 0 4px 12px rgba(41, 93, 255, 0.6);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #000a20 0%, #00030f 50%, #000a20 100%);
-  box-shadow: 0 6px 16px rgba(0, 3, 15, 0.8);
+  background: linear-gradient(180deg, #1a4ce0 0%, #295DFF 50%, #1a4ce0 100%);
+  box-shadow: 0 6px 16px rgba(41, 93, 255, 0.8);
   transform: scale(1.05);
 }
 
 html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(180deg, #000108 0%, #00030f 50%, #000108 100%);
-  box-shadow: 0 2px 6px rgba(0, 1, 8, 0.9);
+  background: linear-gradient(180deg, #123bc0 0%, #295DFF 50%, #123bc0 100%);
+  box-shadow: 0 2px 6px rgba(18, 59, 192, 0.9);
 }
 
 * {
@@ -84,7 +84,7 @@ html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
 html, body {
   scrollbar-width: thin; /* Firefox */
   -ms-overflow-style: auto; /* IE and Edge */
-  scrollbar-color: #000a20 rgba(0, 3, 15, 0.15); /* Firefox scrollbar colors */
+  scrollbar-color: #295DFF rgba(41, 93, 255, 0.15); /* Firefox scrollbar colors */
 }
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here.

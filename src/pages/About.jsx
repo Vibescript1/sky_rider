@@ -267,7 +267,7 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 relative">
+      <section className="py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 1, y: 0 }}
@@ -329,7 +329,7 @@ const About = () => {
       </section>
 
       {/* Our Team Section */}
-      <section className="py-20 relative bg-gradient-to-b from-slate-800/50 to-slate-900/50">
+      {/* <section className="py-20 relative bg-gradient-to-b from-slate-800/50 to-slate-900/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 1, y: 0 }}
@@ -376,10 +376,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-20 relative">
+      <section className="py-10 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 1, y: 0 }}
