@@ -13,7 +13,7 @@ const SectionWrapper = ({ children, className = "", id }) => {
       // Prevent touch event interference
       style={{ touchAction: 'auto' }}
     >
-      <div className="py-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="py-4 bg-gradient-to-br from-[#00030f] via-[#000a20] to-[#00030f]">
         {children}
       </div>
     </motion.div>

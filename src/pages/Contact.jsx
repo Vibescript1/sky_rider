@@ -36,42 +36,53 @@ const Contact = () => {
     if (mapRef.current && !mapInstanceRef.current) {
       // Small delay to ensure DOM is ready
       setTimeout(() => {
-        // Hyderabad coordinates
-        const hyderabadCoords = [17.4488, 78.3906];
-        
-        mapInstanceRef.current = L.map(mapRef.current).setView(hyderabadCoords, 15);
+        try {
+          // Hyderabad coordinates
+          const hyderabadCoords = [17.4488, 78.3906];
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-          maxZoom: 19,
-        }).addTo(mapInstanceRef.current);
+          // Create map instance with proper options
+          const map = L.map(mapRef.current, {
+            center: hyderabadCoords,
+            zoom: 15,
+            zoomControl: true,
+            scrollWheelZoom: true
+          });
 
-        // Create custom icon
-        const customIcon = new L.Icon({
-          iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-          iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41]
-        });
+          mapInstanceRef.current = map;
 
-        // Add marker for business location
-        L.marker(hyderabadCoords, { icon: customIcon })
-          .addTo(mapInstanceRef.current)
-          .bindPopup(`
+          // Add tile layer with correct attribution
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19,
+          }).addTo(map);
+
+          // Create custom icon
+          const customIcon = new L.Icon({
+            iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+            iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+          });
+
+          // Add marker for business location
+          const marker = L.marker(hyderabadCoords, { icon: customIcon }).addTo(map);
+          marker.bindPopup(`
             <div style="text-align: center; padding: 8px;">
               <strong style="color: #2563eb;">skyrydr HQ</strong><br/>
               <span style="color: #6b7280; font-size: 12px;">Gachibowli, Hyderabad, India</span>
             </div>
-          `)
-          .openPopup();
+          `).openPopup();
 
-        // Force map resize after initialization
-        setTimeout(() => {
-          mapInstanceRef.current.invalidateSize();
-        }, 100);
+          // Force map resize after initialization
+          setTimeout(() => {
+            map.invalidateSize();
+          }, 100);
+        } catch (error) {
+          console.error('Error initializing map:', error);
+        }
       }, 100);
     }
 
@@ -199,7 +210,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-[#00030f] via-[#000a20] to-[#00030f]">
       <Header />
 
       {/* Hero Section */}
@@ -208,7 +219,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
         <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -267,7 +278,7 @@ const Contact = () => {
                 >
                   {/* Background Glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${info.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
-                  
+
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 text-center hover:bg-white/10 transition-all duration-300 h-full">
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
@@ -296,7 +307,7 @@ const Contact = () => {
                 >
                   {/* Background Glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${info.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
-                  
+
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 text-center hover:bg-white/10 transition-all duration-300 h-full">
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
@@ -340,7 +351,7 @@ const Contact = () => {
                     Fill out the form below and we'll get back to you within 24 hours
                   </p>
                 </div>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                   <div className="space-y-6">
                     <div className="space-y-3">
@@ -439,13 +450,14 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-blue-400" />
                   Our Location
                 </h3>
-                <div 
-                  ref={mapRef} 
-                  className="w-full h-[600px] rounded-2xl overflow-hidden border border-white/10 z-0 flex-1"
+                <div
+                  ref={mapRef}
+                  className="w-full h-[400px] rounded-2xl overflow-hidden border border-white/10 z-0"
+                  style={{ minHeight: '400px' }}
                 />
                 <div className="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10">
                   <p className="text-white/80 text-sm leading-relaxed">
-                    <strong className="text-white">skyrydr HQ</strong><br/>
+                    <strong className="text-white">skyrydr HQ</strong><br />
                     Plot No. 41-48, Flat No.502, Telecom Nagar, Gachibowli, Hyderabad, Telangana – 500032
                   </p>
                 </div>
@@ -456,75 +468,6 @@ const Contact = () => {
       </section>
 
       {/* Additional Info Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="font-bold text-4xl md:text-5xl text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">skyrydr</span>
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  Icon: Shield,
-                  title: "Safe & Secure",
-                  description: "Your safety is our top priority with fully insured vehicles and professional drivers"
-                },
-                {
-                  Icon: Star,
-                  title: "Premium Service",
-                  description: "Executive transportation with luxury vehicles and personalized service"
-                },
-                {
-                  Icon: Clock,
-                  title: "24/7 Availability",
-                  description: "Round-the-clock service to meet your business travel needs anytime"
-                },
-                {
-                  Icon: Users,
-                  title: "Expert Team",
-                  description: "Experienced professionals dedicated to providing exceptional service"
-                },
-                {
-                  Icon: Lock,
-                  title: "Reliable & Punctual",
-                  description: "On-time pickups and drop-offs guaranteed for your important meetings"
-                },
-                {
-                  Icon: FileText,
-                  title: "Corporate Solutions",
-                  description: "Customized transportation packages for businesses of all sizes"
-                }
-              ].map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 text-center hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-6">
-                    <feature.Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="font-bold text-xl text-white mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

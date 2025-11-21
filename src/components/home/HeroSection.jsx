@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { PageLoader } from "@/components/ui/page-loader";
 
-// Video source path - Local video file
-const heroVideo = "/bg skyrydr.mp4";
+// Video source path - Cloudinary hosted video
+const heroVideo = "https://res.cloudinary.com/diatf1evt/video/upload/v1762697930/18126060-uhd_3840_2160_25fps_y1jnc4.mp4";
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);

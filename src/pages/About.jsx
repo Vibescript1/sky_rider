@@ -70,7 +70,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style={{ scrollbarWidth: 'thin' }}>
+    <div className="min-h-screen bg-gradient-to-br from-[#00030f] via-[#000a20] to-[#00030f]" style={{ scrollbarWidth: 'thin' }}>
       <Header />
       
       {/* Hero Section */}

@@ -30,8 +30,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-slate-900/95 backdrop-blur-lg shadow-2xl shadow-black/20 border-b border-white/10"
-          : "bg-slate-900/90 backdrop-blur-md"
+          ? "bg-gradient-to-br from-[#00030f] to-[#000a20] backdrop-blur-lg shadow-2xl shadow-black/20 border-b border-white/10"
+          : "bg-gradient-to-br from-[#00030f] to-[#000a20] backdrop-blur-md"
       }`}
     >
       {/* Main Header */}
@@ -140,7 +140,7 @@ const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10 shadow-2xl"
+            className="lg:hidden bg-gradient-to-br from-[#00030f] to-[#000a20] backdrop-blur-lg border-t border-white/10 shadow-2xl"
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-1">
               {navLinks.map((link) => (
