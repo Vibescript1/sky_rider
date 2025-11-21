@@ -1,7 +1,19 @@
 import { motion } from "framer-motion";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Users, Shield, Star, Lock, FileText } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  MessageCircle,
+  Users,
+  Shield,
+  Star,
+  Lock,
+  FileText,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,9 +26,12 @@ import "leaflet/dist/leaflet.css";
 // Fix for default markers in React
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconRetinaUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
+  iconUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 });
 
 const Contact = () => {
@@ -27,7 +42,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -45,43 +60,53 @@ const Contact = () => {
             center: hyderabadCoords,
             zoom: 15,
             zoomControl: true,
-            scrollWheelZoom: true
+            scrollWheelZoom: true,
           });
 
           mapInstanceRef.current = map;
 
           // Add tile layer with correct attribution
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution:
+              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 19,
           }).addTo(map);
 
           // Create custom icon
           const customIcon = new L.Icon({
-            iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-            iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconUrl:
+              "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+            iconRetinaUrl:
+              "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
+            shadowUrl:
+              "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
             iconSize: [25, 41],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
-            shadowSize: [41, 41]
+            shadowSize: [41, 41],
           });
 
           // Add marker for business location
-          const marker = L.marker(hyderabadCoords, { icon: customIcon }).addTo(map);
-          marker.bindPopup(`
+          const marker = L.marker(hyderabadCoords, { icon: customIcon }).addTo(
+            map
+          );
+          marker
+            .bindPopup(
+              `
             <div style="text-align: center; padding: 8px;">
               <strong style="color: #2563eb;">skyrydr HQ</strong><br/>
               <span style="color: #6b7280; font-size: 12px;">Gachibowli, Hyderabad, India</span>
             </div>
-          `).openPopup();
+          `
+            )
+            .openPopup();
 
           // Force map resize after initialization
           setTimeout(() => {
             map.invalidateSize();
           }, 100);
         } catch (error) {
-          console.error('Error initializing map:', error);
+          console.error("Error initializing map:", error);
         }
       }, 100);
     }
@@ -104,14 +129,14 @@ const Contact = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleInputChange = (e) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -179,10 +204,11 @@ const Contact = () => {
     {
       Icon: MapPin,
       title: "Visit Our Office",
-      content: "Plot No. 41-48, Flat No.502, Telecom Nagar, Gachibowli, Hyderabad, Telangana – 500032",
+      content:
+        "Plot No. 41-48, Flat No.502, Telecom Nagar, Gachibowli, Hyderabad, Telangana – 500032",
       description: "Headquarters - Schedule a meeting",
       color: "from-blue-500 to-cyan-500",
-      link: "https://www.google.com/maps/search/?api=1&query=Plot+No.+41-48,+Flat+No.502,+Telecom+Nagar,+Gachibowli,+Hyderabad,+Telangana+500032"
+      link: "https://maps.app.goo.gl/MPDkQyncBuYd2p246",
     },
     {
       Icon: Phone,
@@ -190,7 +216,7 @@ const Contact = () => {
       content: "+91 91212 61234",
       description: "24/7 Customer Support Line",
       color: "from-green-500 to-emerald-500",
-      link: "tel:+919121261234"
+      link: "tel:+919121261234",
     },
     {
       Icon: Mail,
@@ -198,14 +224,14 @@ const Contact = () => {
       content: "bookings@skyrydr.com",
       description: "Quick response guaranteed",
       color: "from-purple-500 to-indigo-500",
-      link: "mailto:bookings@skyrydr.com"
+      link: "mailto:bookings@skyrydr.com",
     },
     {
       Icon: Clock,
       title: "Business Hours",
       content: "Mon - Sun: 24/7",
       description: "Always available for you",
-      color: "from-amber-500 to-orange-500"
+      color: "from-amber-500 to-orange-500",
     },
   ];
 
@@ -234,15 +260,21 @@ const Contact = () => {
               className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-full px-6 py-3 border border-white/10 mb-8"
             >
               <MessageCircle className="w-5 h-5 text-blue-400" />
-              <span className="text-white/90 text-base font-semibold">Get In Touch</span>
+              <span className="text-white/90 text-base font-semibold">
+                Get In Touch
+              </span>
             </motion.div>
 
             <h1 className="font-bold text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-tight">
-              Contact <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Us</span>
+              Contact{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Us
+              </span>
             </h1>
             <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto mb-12">
-              Experience premium corporate travel with our executive transportation services.
-              Contact our team for custom mobility solutions tailored to your business needs.
+              Experience premium corporate travel with our executive
+              transportation services. Contact our team for custom mobility
+              solutions tailored to your business needs.
             </p>
           </motion.div>
         </div>
@@ -256,28 +288,38 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <h2 className="font-bold text-4xl md:text-6xl text-white mb-8 leading-tight">
-              Get in <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
+              Get in{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Touch
+              </span>
             </h2>
             <p className="text-white/70 text-xl max-w-2xl mx-auto">
-              Reach out to us for any inquiries or to book our premium transportation services
+              Reach out to us for any inquiries or to book our premium
+              transportation services
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {contactInfo.map((info, index) => (
+            {contactInfo.map((info, index) =>
               info.link ? (
                 <motion.a
                   key={info.title}
                   href={info.link}
-                  target={info.link.startsWith('http') ? '_blank' : '_self'}
-                  rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  target={info.link.startsWith("http") ? "_blank" : "_self"}
+                  rel={
+                    info.link.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   initial={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   whileHover={{ y: -5, scale: 1.02 }}
                   className="group relative"
                 >
                   {/* Background Glow */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${info.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${info.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}
+                  />
 
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 text-center hover:bg-white/10 transition-all duration-300 h-full">
                     <motion.div
@@ -292,9 +334,7 @@ const Contact = () => {
                     <p className="text-white font-medium text-lg mb-2">
                       {info.content}
                     </p>
-                    <p className="text-white/60 text-sm">
-                      {info.description}
-                    </p>
+                    <p className="text-white/60 text-sm">{info.description}</p>
                   </div>
                 </motion.a>
               ) : (
@@ -306,7 +346,9 @@ const Contact = () => {
                   className="group relative"
                 >
                   {/* Background Glow */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${info.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${info.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}
+                  />
 
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 text-center hover:bg-white/10 transition-all duration-300 h-full">
                     <motion.div
@@ -321,13 +363,11 @@ const Contact = () => {
                     <p className="text-white font-medium text-lg mb-2">
                       {info.content}
                     </p>
-                    <p className="text-white/60 text-sm">
-                      {info.description}
-                    </p>
+                    <p className="text-white/60 text-sm">{info.description}</p>
                   </div>
                 </motion.div>
               )
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -348,14 +388,21 @@ const Contact = () => {
                     Send Us a Message
                   </h2>
                   <p className="text-white/70 text-lg">
-                    Fill out the form below and we'll get back to you within 24 hours
+                    Fill out the form below and we'll get back to you within 24
+                    hours
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6 flex-1 flex flex-col"
+                >
                   <div className="space-y-6">
                     <div className="space-y-3">
-                      <Label htmlFor="name" className="text-white/80 text-sm font-semibold">
+                      <Label
+                        htmlFor="name"
+                        className="text-white/80 text-sm font-semibold"
+                      >
                         Full Name *
                       </Label>
                       <Input
@@ -370,7 +417,10 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <Label htmlFor="email" className="text-white/80 text-sm font-semibold">
+                      <Label
+                        htmlFor="email"
+                        className="text-white/80 text-sm font-semibold"
+                      >
                         Email Address *
                       </Label>
                       <Input
@@ -386,7 +436,10 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <Label htmlFor="phone" className="text-white/80 text-sm font-semibold">
+                      <Label
+                        htmlFor="phone"
+                        className="text-white/80 text-sm font-semibold"
+                      >
                         Phone Number
                       </Label>
                       <Input
@@ -401,7 +454,10 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <Label htmlFor="message" className="text-white/80 text-sm font-semibold">
+                      <Label
+                        htmlFor="message"
+                        className="text-white/80 text-sm font-semibold"
+                      >
                         Message *
                       </Label>
                       <Textarea
@@ -451,14 +507,25 @@ const Contact = () => {
                   Our Location
                 </h3>
                 <div
-                  ref={mapRef}
                   className="w-full h-[400px] rounded-2xl overflow-hidden border border-white/10 z-0"
-                  style={{ minHeight: '400px' }}
-                />
+                  style={{ minHeight: "400px" }}
+                >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7613.0600985561805!2d78.3595548420186!3d17.43432661984042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93f20da8a25f%3A0x44aeee107328e110!2sTelecom%20Nagar%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500032!5e0!3m2!1sen!2sin!4v1763716529214!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+                </div>
                 <div className="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10">
                   <p className="text-white/80 text-sm leading-relaxed">
-                    <strong className="text-white">skyrydr HQ</strong><br />
-                    Plot No. 41-48, Flat No.502, Telecom Nagar, Gachibowli, Hyderabad, Telangana – 500032
+                    <strong className="text-white">skyrydr HQ</strong>
+                    <br />
+                    Plot No. 41-48, Flat No.502, Telecom Nagar, Gachibowli,
+                    Hyderabad, Telangana – 500032
                   </p>
                 </div>
               </div>
