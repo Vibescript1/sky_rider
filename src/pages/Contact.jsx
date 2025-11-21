@@ -507,10 +507,19 @@ const Contact = () => {
                   Our Location
                 </h3>
                 <div
-                  ref={mapRef}
-                  className="w-full h-[400px] rounded-2xl overflow-hidden border border-white/10 z-0"
-                  style={{ minHeight: '400px' }}
-                />
+                  className="w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden border border-white/10 z-0"
+                  style={{ minHeight: "500px" }}
+                >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7613.0600985561805!2d78.3595548420186!3d17.43432661984042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93f20da8a25f%3A0x44aeee107328e110!2sTelecom%20Nagar%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500032!5e0!3m2!1sen!2sin!4v1763716529214!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+                </div>
                 <div className="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10">
                   <p className="text-white/80 text-sm leading-relaxed">
                     <strong className="text-white">skyrydr HQ</strong>
