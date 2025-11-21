@@ -168,47 +168,46 @@ const PrivacyPolicy = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 9876543210",
-      href: "tel:+919876543210"
+      value: "+91 91212 61234",
+      href: "tel:+919121261234"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-[#00030f] via-[#000a20] to-[#00030f]">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
+        <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4 border border-white/20"
+              className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-full px-6 py-3 border border-white/10 mb-8"
             >
-              <Shield className="w-4 h-4 text-white" />
-              <span className="text-white/90 text-sm font-medium">GDPR Compliant Privacy Policy</span>
+              <Shield className="w-5 h-5 text-blue-400" />
+              <span className="text-white/90 text-base font-semibold">GDPR Compliant Privacy Policy</span>
             </motion.div>
 
-            <h1 className="font-bold text-5xl md:text-6xl text-white mb-4 leading-tight">
-              Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-400">Policy</span>
+            <h1 className="font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">
+              Privacy <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Policy</span>
             </h1>
-            <p className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto mb-8">
+            <p className="text-white/70 text-xl leading-relaxed max-w-3xl mx-auto mb-8">
               skyrydr is committed to protecting your privacy and ensuring the security of your personal information in accordance with GDPR and applicable data protection laws. This policy explains how we collect, use, and protect your personal data.
             </p>
-            <div className="text-blue-100 text-sm">
+            <div className="text-white/60 text-sm">
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
           </motion.div>
@@ -216,25 +215,27 @@ const PrivacyPolicy = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-12">
-              <h2 className="font-bold text-2xl text-gray-900 mb-4">Our Commitment to Data Protection</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
+            <div className="bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-8">
+              <h2 className="font-bold text-2xl text-white mb-6">Our Commitment to Data Protection</h2>
+              <p className="text-white/80 leading-relaxed mb-4">
                 At skyrydr, we understand that your privacy is paramount. This Privacy Policy explains how we collect,
                 use, disclose, and safeguard your information when you use our transportation services. We are committed to
                 protecting your personal information and being transparent about our data practices in compliance with GDPR principles.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-white/80 leading-relaxed mb-4">
                 This policy applies to all data subjects including customers, corporate clients, drivers, and visitors to our platforms.
                 We may update this policy at any time, and it is important that you read this statement together with any other
                 privacy notices we may provide.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white/80 leading-relaxed">
                 By using our services, you acknowledge that you have read and understood this Privacy Policy and agree to the
                 collection and use of information in accordance with these terms.
               </p>
@@ -244,46 +245,50 @@ const PrivacyPolicy = () => {
       </section>
 
       {/* Privacy Sections */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <motion.div
-              initial={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-4">
-                Comprehensive Data <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Protection</span>
+              <h2 className="font-bold text-4xl md:text-5xl text-white mb-6">
+                Comprehensive Data <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Protection</span>
               </h2>
-              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+              <p className="text-white/70 text-xl max-w-2xl mx-auto">
                 Detailed information about our GDPR-compliant data collection, usage, and protection practices
               </p>
             </motion.div>
 
-            <div className="space-y-12">
+            <div className="space-y-8">
               {sections.map((section, index) => (
                 <motion.div
                   key={section.title}
-                  initial={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
-                      <section.icon className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                      <section.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-2xl text-gray-900">{section.title}</h3>
+                    <h3 className="font-bold text-2xl text-white">{section.title}</h3>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-4">
                     {section.content.map((item, itemIndex) => (
                       <motion.div
                         key={itemIndex}
-                        initial={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: (index * 0.1) + (itemIndex * 0.05) }}
                         className="flex items-start gap-3"
                       >
-                        <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0 mt-2"></div>
-                        <p className="text-gray-600 leading-relaxed">{item}</p>
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0 mt-2"></div>
+                        <p className="text-white/80 leading-relaxed">{item}</p>
                       </motion.div>
                     ))}
                   </div>
@@ -295,38 +300,41 @@ const PrivacyPolicy = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="font-bold text-4xl text-white mb-6">
               Questions About Your Privacy?
             </h2>
-            <p className="text-blue-100 text-xl mb-8 leading-relaxed">
+            <p className="text-white/70 text-xl mb-12 leading-relaxed">
               Our privacy team is here to help. Contact us with any questions about this policy or your data rights.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto">
               {contactInfo.map((contact, index) => (
                 <motion.a
                   key={contact.label}
                   href={contact.href}
-                  initial={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-3 mb-2">
-                    <contact.icon className="w-5 h-5 text-white" />
+                    <contact.icon className="w-5 h-5 text-blue-400" />
                     <span className="text-white font-medium">{contact.label}</span>
                   </div>
-                  <div className="text-blue-100">{contact.value}</div>
+                  <div className="text-white/70">{contact.value}</div>
                 </motion.a>
               ))}
             </div>
 
-            <div className="text-blue-100 text-sm">
+            <div className="text-white/60 text-sm">
               We typically respond to privacy inquiries within 2-3 business days.
             </div>
           </motion.div>
