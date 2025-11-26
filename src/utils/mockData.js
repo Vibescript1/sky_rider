@@ -292,6 +292,98 @@ export const fleetData = [
     available: true,
     baggage: 25
   },
+  // ⚡ Electric Vehicles
+  {
+    id: 24,
+    name: "Tesla Model S",
+    category: "electric",
+    type: "Electric Sedan",
+    seating: 5,
+    price: 6000,
+    pricePerKm: 25,
+    features: ["Zero Emissions", "Autopilot", "Premium Interior", "Fast Charging"],
+    image: "/electric car/p1.jpg",
+    available: true,
+    baggage: 3
+  },
+  {
+    id: 25,
+    name: "Nissan Leaf",
+    category: "electric",
+    type: "Electric Hatchback",
+    seating: 5,
+    price: 3500,
+    pricePerKm: 18,
+    features: ["Eco-Friendly", "Smart Connectivity", "AC", "Regenerative Braking"],
+    image: "/electric car/p2.jpg",
+    available: true,
+    baggage: 2
+  },
+  {
+    id: 26,
+    name: "Hyundai Kona Electric",
+    category: "electric",
+    type: "Electric SUV",
+    seating: 5,
+    price: 4500,
+    pricePerKm: 22,
+    features: ["Long Range", "Fast Charging", "Smart Features", "Spacious Cabin"],
+    image: "/electric car/p3.jpg",
+    available: true,
+    baggage: 3
+  },
+  {
+    id: 27,
+    name: "MG ZS EV",
+    category: "electric",
+    type: "Electric SUV",
+    seating: 5,
+    price: 4200,
+    pricePerKm: 20,
+    features: ["Zero Emissions", "Smart Tech", "Panoramic Roof", "AC"],
+    image: "/electric car/p4.jpg",
+    available: true,
+    baggage: 3
+  },
+  {
+    id: 28,
+    name: "Tata Nexon EV",
+    category: "electric",
+    type: "Electric SUV",
+    seating: 5,
+    price: 3800,
+    pricePerKm: 19,
+    features: ["Eco-Friendly", "Connected Car", "AC", "Smart Features"],
+    image: "/electric car/p5.jpg",
+    available: true,
+    baggage: 3
+  },
+  {
+    id: 29,
+    name: "Mahindra eKUV100",
+    category: "electric",
+    type: "Electric Hatchback",
+    seating: 4,
+    price: 3200,
+    pricePerKm: 16,
+    features: ["Compact Design", "Zero Emissions", "City Friendly", "Smart Tech"],
+    image: "/electric car/p6.jpg",
+    available: true,
+    baggage: 2
+  },
+  {
+    id: 30,
+    name: "Tata Tiago EV",
+    category: "electric",
+    type: "Electric Hatchback",
+    seating: 5,
+    price: 3000,
+    pricePerKm: 15,
+    features: ["Urban Mobility", "Eco-Friendly", "Smart Features", "AC"],
+    image: "/electric car/p7.jpg",
+    available: true,
+    baggage: 2
+  },
 ];
 
 

@@ -153,7 +153,7 @@ const PrivacyPolicy = () => {
       icon: Users,
       content: [
         "In case of any questions or suggestions regarding the Policy, please contact skyrydr at:",
-        "Email: info@skyrydr.com"
+        "Email: nfo@skyrydr.com"
       ]
     }
   ];
@@ -162,8 +162,8 @@ const PrivacyPolicy = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "info@skyrydr.com",
-      href: "mailto:info@skyrydr.com"
+      value: "nfo@skyrydr.com",
+      href: "mailto:nfo@skyrydr.com"
     },
     {
       icon: Phone,

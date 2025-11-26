@@ -11,7 +11,7 @@ const TermsAndConditions = () => {
       content: [
         "The customer shall pay the car rental fare as per the applicable rates and payment schedules mentioned on the website of skyrydr at the time of booking. The customer shall also pay parking charges, toll-charges, service tax, state tax and any other fee or levy presently payable or imposed hereinafter under applicable law/s for availing the car rental services.",
         "The payment has to be transferred to the skyrydr account for the transaction to be completed. The client will have the responsibility to confirm the transaction with skyrydr and send all relevant details and proof to confirm the same.",
-        "The billing shall be done after the completion of the transaction and the bill shall be sent through email. The client shall pay the amount communicated on email through the payment gateway and shall send us the confirmation of the transaction separately through email to info@skyrydr.com.",
+        "The billing shall be done after the completion of the transaction and the bill shall be sent through email. The client shall pay the amount communicated on email through the payment gateway and shall send us the confirmation of the transaction separately through email to nfo@skyrydr.com.",
         "In case of a payment made before the commencement of a booking, the amount shall be treated as advance / part payment and the final amount nett of the advance paid shall be cleared by the client as per the amount intimated to the client on email.",
         "The transaction / payment has to be made within the office hours of 0930 to 1900 hrs on a monday to saturday basis excluding public holidays for the vehicle to be dispatched. alternatively, for other hours / days, the client has the option to come to our 24×7 operations office and complete the physical swiping of the credit card and make the payment and confirm the booking."
       ]
@@ -232,12 +232,12 @@ const TermsAndConditions = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                 <div>
                   <h3 className="font-semibold text-white mb-3">Legal Inquiries</h3>
-                  <p className="text-white/70 mb-1">bookings@skyrydr.com</p>
+                  <p className="text-white/70 mb-1">nfo@skyrydr.com</p>
                   <p className="text-white/70">Phone: +91 9121261234</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-white mb-3">General Support</h3>
-                  <p className="text-white/70 mb-1">bookings@skyrydr.com</p>
+                  <p className="text-white/70 mb-1">nfo@skyrydr.com</p>
                   <p className="text-white/70">Phone: +91 9121261234</p>
                 </div>
               </div>

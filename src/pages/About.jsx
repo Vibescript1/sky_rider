@@ -42,10 +42,11 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2018", event: "Company Founded", achievement: "Started with 5 luxury sedans" },
-    { year: "2020", event: "National Expansion", achievement: "Expanded to 10+ cities" },
-    { year: "2022", event: "Tech Revolution", achievement: "Launched digital platform" },
-    { year: "2024", event: "Market Leadership", achievement: "500+ corporate clients" }
+    { year: "2004", event: "Company Founded", achievement: "Started with 5 luxury sedans" },
+    { year: "2008", event: "Regional Growth", achievement: "Expanded to 3 major cities" },
+    { year: "2012", event: "National Presence", achievement: "Present in 8+ cities" },
+    { year: "2018", event: "Digital Transformation", achievement: "Launched advanced booking platform" },
+    { year: "2024", event: "Industry Leader", achievement: "500+ corporate clients" }
   ];
 
   const teamMembers = [
@@ -101,7 +102,7 @@ const About = () => {
               Redefining <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Corporate Travel</span>
             </h1>
             <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto mb-12">
-              Since 2018, we've been transforming business transportation with premium fleet solutions, 
+              For over two decades, we've been transforming business transportation with premium fleet solutions, 
               cutting-edge technology, and unwavering commitment to excellence.
             </p>
           </motion.div>
@@ -131,7 +132,7 @@ const About = () => {
               
               <div className="space-y-6 text-white/70 text-lg leading-relaxed">
                 <p>
-                  Founded in 2018 with a vision to revolutionize corporate transportation, 
+                  Founded since 2 decades with a vision to revolutionize corporate transportation, 
                   <span className="text-white font-semibold"> skyrydr</span> has emerged as 
                   India's most trusted partner for premium business travel solutions.
                 </p>

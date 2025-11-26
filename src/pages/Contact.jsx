@@ -221,10 +221,10 @@ const Contact = () => {
     {
       Icon: Mail,
       title: "Email Us",
-      content: "bookings@skyrydr.com",
+      content: "nfo@skyrydr.com",
       description: "Quick response guaranteed",
       color: "from-purple-500 to-indigo-500",
-      link: "mailto:bookings@skyrydr.com",
+      link: "mailto:nfo@skyrydr.com",
     },
     {
       Icon: Clock,

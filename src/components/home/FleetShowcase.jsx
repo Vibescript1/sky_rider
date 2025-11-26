@@ -29,7 +29,7 @@ const FleetShowcase = () => {
       price: 3500,
       description: "Spacious comfort for executive groups and clients",
       features: ["Extra Luggage Space", "Premium Sound", "Climate Control", "Wi-Fi"],
-      image: "https://t4.ftcdn.net/jpg/07/42/50/05/360_F_742500551_Ae2dvu7igt9oyf09DxFEfBrXYhuLrq4w.jpg",
+      image: "/b844c2eb-f43e-432a-98e4-1275ec84b454.jpg",
       available: true,
       popular: false
     },
@@ -42,7 +42,7 @@ const FleetShowcase = () => {
       price: 4500,
       description: "Ultimate luxury experience for VIP executives",
       features: ["Champagne Service", "Massage Seats", "Privacy Glass", "Wi-Fi"],
-      image: "https://www.carbike360.ae/_next/image?url=https%3A%2F%2Fcarbike360-ae.s3.me-central-1.amazonaws.com%2Fmedium_BMW_7_Series_35446b286f.jpg&w=3840&q=75",
+      image: "/bmw11.png",
       available: true,
       popular: true
     },

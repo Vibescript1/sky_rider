@@ -81,7 +81,7 @@ const StatsSection = () => {
   const stats = [
     { 
       label: "Companies Served", 
-      value: 500, 
+      value: 100, 
       suffix: "+", 
       icon: Building2 
     },
