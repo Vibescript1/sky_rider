@@ -142,10 +142,10 @@ const Footer = () => {
               >
                 <Phone className="w-5 h-5 flex-shrink-0 text-green-400 group-hover:scale-110 transition-transform" />
                 <a
-                  href="tel:+919121261234"
+                  href="tel:+919550275823"
                   className="text-white/70 group-hover:text-white transition-colors hover:underline"
                 >
-                  +91 91212 61234
+                  +91 95502 75823
                 </a>
               </motion.li>
               <motion.li 
@@ -154,10 +154,10 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5 flex-shrink-0 text-cyan-400 group-hover:scale-110 transition-transform" />
                 <a
-                  href="mailto:bookings@skyrydr.com"
+                  href="mailto:info@skyrydr.com"
                   className="text-white/70 group-hover:text-white transition-colors hover:underline"
                 >
-                  bookings@skyrydr.com
+                  info@skyrydr.com
                 </a>
               </motion.li>
             </ul>
@@ -187,7 +187,7 @@ const Footer = () => {
         <div className="text-center pt-6 border-t border-white/10">
           <p className="text-white/50 text-sm mb-2">
             &copy; {new Date().getFullYear()} Sky Travels and Logistics Private Limited | 
-            CIN: U63031TG2019PTC131839 | GSTIN: 36ABBCS8643L1ZU
+            LLPIN- ABZ4596. | GSTIN: 36ABBCS8643L1ZU
           </p>
           <p className="text-white/40 text-xs">
             All vehicle images are for representational purposes only. 

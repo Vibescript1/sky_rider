@@ -213,18 +213,18 @@ const Contact = () => {
     {
       Icon: Phone,
       title: "Call Us Directly",
-      content: "+91 91212 61234",
+      content: "+91 95502 75823",
       description: "24/7 Customer Support Line",
       color: "from-green-500 to-emerald-500",
-      link: "tel:+919121261234",
+      link: "tel:+919550275823",
     },
     {
       Icon: Mail,
       title: "Email Us",
-      content: "nfo@skyrydr.com",
+      content: "info@skyrydr.com",
       description: "Quick response guaranteed",
       color: "from-purple-500 to-indigo-500",
-      link: "mailto:nfo@skyrydr.com",
+      link: "mailto:info@skyrydr.com",
     },
     {
       Icon: Clock,
