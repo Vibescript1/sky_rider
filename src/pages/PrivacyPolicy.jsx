@@ -162,14 +162,14 @@ const PrivacyPolicy = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "nfo@skyrydr.com",
-      href: "mailto:nfo@skyrydr.com"
+      value: "info@skyrydr.com",
+      href: "mailto:info@skyrydr.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 91212 61234",
-      href: "tel:+919121261234"
+      value: "+91 95502 75823",
+      href: "tel:+919550275823"
     }
   ];
 

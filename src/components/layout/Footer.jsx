@@ -186,7 +186,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="text-center pt-6 border-t border-white/10">
           <p className="text-white/50 text-sm mb-2">
-            &copy; {new Date().getFullYear()} Sky Travels and Logistics Private Limited | 
+            &copy; {new Date().getFullYear()} SKYRYDR CABS LLP | 
             LLPIN- ABZ4596. | GSTIN: 36ABBCS8643L1ZU
           </p>
           <p className="text-white/40 text-xs">
